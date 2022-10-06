@@ -48,8 +48,5 @@ class FlightTestCase(TestCase):
         self.assertEqual(response.status_code,200)
         self.assertEqual(response.context["flights"].count(),3)
 
-    def test_index_page(self):
-        c = Client()
-        response = c.get("/flights/")
-        self.assertnotEqual(response.status_code,404)
+
         
